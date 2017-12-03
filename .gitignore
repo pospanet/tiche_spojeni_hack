@@ -10,6 +10,3 @@ Output/
 !PretrainedModels/placeholder
 PretrainedModels/
 dataset/*.txt
-
-#!dataset/raw/*/placeholder
-#dataset/raw/
