@@ -27,7 +27,7 @@ __C.CNTK.USE_MEAN_GRADIENT = True
 __C.CNTK.FORCE_DETERMINISTIC = True
 __C.CNTK.FAST_MODE = False
 
-__C.CNTK.DATASET = "CarRegistrationPlate" # 
+__C.CNTK.DATASET = "LetterSigns" # 
 __C.CNTK.BASE_MODEL = "AlexNet" # "VGG16" or "AlexNet"
 __C.CNTK.CONV_BIAS_INIT = 0.0
 __C.CNTK.SIGMA_RPN_L1 = 3.0
@@ -39,7 +39,7 @@ __C.CNTK.L2_REG_WEIGHT = 0.0005
 __C.CNTK.MOMENTUM_PER_MB = 0.9
 
 # E2E config
-__C.CNTK.E2E_MAX_EPOCHS = 50
+__C.CNTK.E2E_MAX_EPOCHS = 20
 __C.CNTK.E2E_LR_PER_SAMPLE = [0.001] * 10 + [0.0001] * 10 + [0.00001]
 
 # 4-stage config (alternating training scheme)
@@ -51,8 +51,8 @@ __C.CNTK.FRCN_LR_PER_SAMPLE = [0.001] * 6 + [0.0001] * 2
 __C.CNTK.INPUT_ROIS_PER_IMAGE = 200
 #__C.CNTK.IMAGE_WIDTH = 1440
 #__C.CNTK.IMAGE_HEIGHT = 1080
-__C.CNTK.IMAGE_WIDTH = 4032
-__C.CNTK.IMAGE_HEIGHT = 3024
+__C.CNTK.IMAGE_WIDTH = 720
+__C.CNTK.IMAGE_HEIGHT = 1280
 
 __C.CNTK.RESULTS_NMS_THRESHOLD = 0.3 # see also: __C.TEST.NMS = 0.3
 __C.CNTK.RESULTS_NMS_CONF_THRESHOLD = 0.0
@@ -72,7 +72,7 @@ __C.CNTK.DIMS_STREAM_NAME = 'dims'
 #
 # Data sets
 #
-if __C.CNTK.DATASET == "CarRegistrationPlate":
+if __C.CNTK.DATASET == "LetterSigns":
     __C.CNTK.MAP_FILE_PATH = "../dataset"
     __C.CNTK.CLASS_MAP_FILE = "class_map.txt"
     __C.CNTK.TRAIN_MAP_FILE = "train_img_file.txt"
