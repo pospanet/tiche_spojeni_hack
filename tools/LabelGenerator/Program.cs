@@ -11,10 +11,9 @@ namespace LabelGenerator
 
             DirectoryInfo directoryInfo = new DirectoryInfo(directoryPath);
 
-            foreach (DirectoryInfo characterFolder in directoryInfo.EnumerateDirectories())
-            foreach (FileInfo fileInfo in characterFolder.EnumerateFiles("*.tsv"))
+            foreach (FileInfo fileInfo in directoryInfo.EnumerateFiles("*.tsv"))
             {
-                string label = characterFolder.Name;
+                string label = fileInfo.Name.Split().First();
                 using (StreamWriter streamWriter = File.CreateText(Path.Combine(directoryInfo.FullName,
                     string.Concat(Path.GetFileNameWithoutExtension(fileInfo.FullName), ".labels.tsv"))))
                 {

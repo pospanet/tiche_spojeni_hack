@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "LabelGenerator": {
+      "commandName": "Project",
+      "commandLineArgs": "dir:C:\\Users\\pospa\\Projects\\DeafHack\\dataset\\positive"
+    }
+  }
+}
